@@ -1,0 +1,28 @@
+{
+	"BUILD_DIR" : "/home/mr_robot/Desktop/Git/modern_setting_app/build/Android_Qt_6_8_3_Clang_arm64_v8a-Debug/modern_setting_app_autogen",
+	"CMAKE_BINARY_DIR" : "/home/mr_robot/Desktop/Git/modern_setting_app/build/Android_Qt_6_8_3_Clang_arm64_v8a-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/mr_robot/Desktop/Git/modern_setting_app/build/Android_Qt_6_8_3_Clang_arm64_v8a-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/mr_robot/Desktop/Git/modern_setting_app",
+	"CMAKE_SOURCE_DIR" : "/home/mr_robot/Desktop/Git/modern_setting_app",
+	"INCLUDE_DIR" : "/home/mr_robot/Desktop/Git/modern_setting_app/build/Android_Qt_6_8_3_Clang_arm64_v8a-Debug/modern_setting_app_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/mr_robot/Desktop/Git/modern_setting_app/images/wifi_128_black.png",
+		"/home/mr_robot/Desktop/Git/modern_setting_app/images/keyboard_arrow_left_128_black.png",
+		"/home/mr_robot/Desktop/Git/modern_setting_app/images/keyboard_arrow_right_128_gray.png",
+		"/home/mr_robot/Desktop/Git/modern_setting_app/images/wifi_128_green.png",
+		"/home/mr_robot/Desktop/Git/modern_setting_app/images/wifi_128_white.png",
+		"/home/mr_robot/Desktop/Git/modern_setting_app/images/keyboard_arrow_right_128_black.png",
+		"/home/mr_robot/Desktop/Git/modern_setting_app/images/keyboard_arrow_left_128_gray.png"
+	],
+	"LOCK_FILE" : "/home/mr_robot/Desktop/Git/modern_setting_app/build/Android_Qt_6_8_3_Clang_arm64_v8a-Debug/CMakeFiles/modern_setting_app_autogen.dir/AutoRcc_resources_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "/home/mr_robot/Qt/6.8.3/gcc_64/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/mr_robot/Desktop/Git/modern_setting_app/build/Android_Qt_6_8_3_Clang_arm64_v8a-Debug/CMakeFiles/modern_setting_app_autogen.dir/AutoRcc_resources_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/mr_robot/Desktop/Git/modern_setting_app/resources.qrc",
+	"VERBOSITY" : 0
+}

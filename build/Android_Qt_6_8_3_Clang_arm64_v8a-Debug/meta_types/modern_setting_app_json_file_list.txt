@@ -1,0 +1,2 @@
+/home/mr_robot/Desktop/Git/modern_setting_app/build/Android_Qt_6_8_3_Clang_arm64_v8a-Debug/modern_setting_app_autogen/include/../EWIEGA46WW/moc_mainwindow.cpp.json
+/home/mr_robot/Desktop/Git/modern_setting_app/build/Android_Qt_6_8_3_Clang_arm64_v8a-Debug/modern_setting_app_autogen/include/../HAGZTRH3L5/moc_ethernet.cpp.json

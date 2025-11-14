@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "org.qtproject.example.modern_setting_app-debug-10:/xml_qtprovider_paths.xml.flat",
+        "source": "org.qtproject.example.modern_setting_app-android-build-modern_setting_app-11:/xml/qtprovider_paths.xml"
+    }
+]
