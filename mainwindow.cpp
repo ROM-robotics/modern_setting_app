@@ -1003,23 +1003,20 @@ void MainWindow::onWifiListReceived(const QJsonArray &wifiList)
 {
     qDebug() << "Received WiFi list with" << wifiList.size() << "networks";
     
-    // Create dialog to show WiFi list
+    // Create fullscreen dialog (same size as app)
     QDialog *dialog = new QDialog(this);
     dialog->setWindowTitle("Available WiFi Networks");
     
-    // Set larger size for Android tablets (1280x800)
-    // Use 90% of screen height and 80% of screen width
-    QSize screenSize = QApplication::primaryScreen()->size();
-    int dialogWidth = qMin(700, static_cast<int>(screenSize.width() * 0.8));
-    int dialogHeight = qMin(650, static_cast<int>(screenSize.height() * 0.9));
-    dialog->resize(dialogWidth, dialogHeight);
+    // Make dialog same size as main window (fullscreen for tablet)
+    dialog->setGeometry(this->geometry());
+    dialog->setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
     
     QVBoxLayout *layout = new QVBoxLayout(dialog);
-    layout->setContentsMargins(16, 16, 16, 16);
-    layout->setSpacing(12);
+    layout->setContentsMargins(20, 20, 20, 20);
+    layout->setSpacing(16);
     
     QLabel *titleLabel = new QLabel("Select a WiFi network:");
-    titleLabel->setStyleSheet("font-size: 16px; font-weight: 600; margin-bottom: 8px;");
+    titleLabel->setStyleSheet("font-size: 18px; font-weight: 600; margin-bottom: 8px;");
     layout->addWidget(titleLabel);
     
     // Create list widget with explicit size policy
@@ -1028,7 +1025,6 @@ void MainWindow::onWifiListReceived(const QJsonArray &wifiList)
     listWidget->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
     listWidget->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
     listWidget->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
-    listWidget->setMinimumHeight(400);
     
     listWidget->setStyleSheet(
         "QListWidget {"
@@ -1068,8 +1064,27 @@ void MainWindow::onWifiListReceived(const QJsonArray &wifiList)
     
     layout->addWidget(listWidget);
     
-    // Add buttons
+    // Add buttons - half width each
     QHBoxLayout *buttonLayout = new QHBoxLayout();
+    buttonLayout->setSpacing(12);
+    buttonLayout->setContentsMargins(0, 0, 0, 0);
+    
+    QPushButton *cancelBtn = new QPushButton("Cancel");
+    cancelBtn->setMinimumHeight(48);
+    cancelBtn->setStyleSheet(
+        "QPushButton {"
+        "    background-color: #f1f5f9;"
+        "    color: #475569;"
+        "    border: 1px solid #e2e8f0;"
+        "    padding: 14px 28px;"
+        "    font-size: 16px;"
+        "    font-weight: 600;"
+        "    border-radius: 8px;"
+        "}"
+        "QPushButton:hover {"
+        "    background-color: #e2e8f0;"
+        "}"
+    );
     
     QPushButton *connectBtn = new QPushButton("Connect");
     connectBtn->setMinimumHeight(48);
@@ -1092,22 +1107,9 @@ void MainWindow::onWifiListReceived(const QJsonArray &wifiList)
     );
     connectBtn->setEnabled(false);
     
-    QPushButton *cancelBtn = new QPushButton("Cancel");
-    cancelBtn->setMinimumHeight(48);
-    cancelBtn->setStyleSheet(
-        "QPushButton {"
-        "    background-color: #f1f5f9;"
-        "    color: #475569;"
-        "    border: 1px solid #e2e8f0;"
-        "    padding: 14px 28px;"
-        "    font-size: 16px;"
-        "    font-weight: 600;"
-        "    border-radius: 8px;"
-        "}"
-        "QPushButton:hover {"
-        "    background-color: #e2e8f0;"
-        "}"
-    );
+    // Make buttons equal width by adding them with stretch factor 1
+    buttonLayout->addWidget(cancelBtn, 1);
+    buttonLayout->addWidget(connectBtn, 1);
     
     // Enable connect button when item is selected
     connect(listWidget, &QListWidget::itemSelectionChanged, [connectBtn, listWidget]() {
@@ -1125,26 +1127,62 @@ void MainWindow::onWifiListReceived(const QJsonArray &wifiList)
 
             // Check if password is needed (not an open network)
             if (security != "Open" && security != "--") {
-                // Create a small custom password dialog with show/hide toggle
+                // Create fullscreen password dialog with show/hide toggle
                 QDialog *pwdDialog = new QDialog(dialog);
                 pwdDialog->setWindowTitle("WiFi Password");
                 pwdDialog->setModal(true);
+                
+                // Make password dialog fullscreen (same size as main window)
+                pwdDialog->setGeometry(this->geometry());
+                pwdDialog->setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
                 QVBoxLayout *pwdLayout = new QVBoxLayout(pwdDialog);
+                pwdLayout->setContentsMargins(20, 20, 20, 20);
+                pwdLayout->setSpacing(16);
+                
                 QLabel *prompt = new QLabel(QString("Enter password for '%1':").arg(ssid));
-                prompt->setStyleSheet("font-size:13px; margin-bottom:6px;");
+                prompt->setStyleSheet("font-size: 18px; font-weight: 600; margin-bottom: 12px;");
                 pwdLayout->addWidget(prompt);
+                
+                // Add spacer to push content to center
+                pwdLayout->addStretch(1);
 
                 QHBoxLayout *hLayout = new QHBoxLayout();
+                hLayout->setSpacing(8);
+                
                 QLineEdit *pwdEdit = new QLineEdit();
                 pwdEdit->setEchoMode(QLineEdit::Password);
-                pwdEdit->setMinimumWidth(300);
+                pwdEdit->setMinimumHeight(48);
                 pwdEdit->setPlaceholderText("Password");
+                pwdEdit->setStyleSheet(
+                    "QLineEdit {"
+                    "    font-size: 16px;"
+                    "    padding: 12px;"
+                    "    border: 2px solid #e2e8f0;"
+                    "    border-radius: 8px;"
+                    "}"
+                    "QLineEdit:focus {"
+                    "    border-color: #3b82f6;"
+                    "}"
+                );
 
                 QToolButton *toggleBtn = new QToolButton();
                 toggleBtn->setCheckable(true);
                 toggleBtn->setText("Show");
-                toggleBtn->setFixedSize(48, 24);
+                toggleBtn->setMinimumSize(60, 48);
+                toggleBtn->setStyleSheet(
+                    "QToolButton {"
+                    "    font-size: 14px;"
+                    "    padding: 8px 12px;"
+                    "    border: 1px solid #e2e8f0;"
+                    "    border-radius: 8px;"
+                    "    background-color: #f1f5f9;"
+                    "}"
+                    "QToolButton:checked {"
+                    "    background-color: #dbeafe;"
+                    "    border-color: #3b82f6;"
+                    "}"
+                );
 
                 connect(toggleBtn, &QToolButton::toggled, pwdEdit, [pwdEdit, toggleBtn](bool checked){
                     if (checked) {
@@ -1156,20 +1194,58 @@ void MainWindow::onWifiListReceived(const QJsonArray &wifiList)
                     }
                 });
 
-                hLayout->addWidget(pwdEdit);
+                hLayout->addWidget(pwdEdit, 1);
                 hLayout->addWidget(toggleBtn);
                 pwdLayout->addLayout(hLayout);
+                
+                // Add spacer to push buttons to bottom
+                pwdLayout->addStretch(2);
 
                 QHBoxLayout *btns = new QHBoxLayout();
+                btns->setSpacing(12);
+                btns->setContentsMargins(0, 0, 0, 0);
+                
                 QPushButton *cancelPwd = new QPushButton("Cancel");
+                cancelPwd->setMinimumHeight(48);
+                cancelPwd->setStyleSheet(
+                    "QPushButton {"
+                    "    background-color: #f1f5f9;"
+                    "    color: #475569;"
+                    "    border: 1px solid #e2e8f0;"
+                    "    padding: 14px 28px;"
+                    "    font-size: 16px;"
+                    "    font-weight: 600;"
+                    "    border-radius: 8px;"
+                    "}"
+                );
+                
                 QPushButton *okPwd = new QPushButton("Connect");
-                btns->addStretch();
-                btns->addWidget(cancelPwd);
-                btns->addWidget(okPwd);
+                okPwd->setMinimumHeight(48);
+                okPwd->setStyleSheet(
+                    "QPushButton {"
+                    "    background-color: #3b82f6;"
+                    "    color: white;"
+                    "    border: none;"
+                    "    padding: 14px 28px;"
+                    "    font-size: 16px;"
+                    "    font-weight: 600;"
+                    "    border-radius: 8px;"
+                    "}"
+                );
+                
+                btns->addWidget(cancelPwd, 1);
+                btns->addWidget(okPwd, 1);
                 pwdLayout->addLayout(btns);
 
                 connect(cancelPwd, &QPushButton::clicked, pwdDialog, &QDialog::reject);
                 connect(okPwd, &QPushButton::clicked, pwdDialog, &QDialog::accept);
+                
+                // Set focus to password field and show keyboard on Android
+                pwdEdit->setFocus();
+                QTimer::singleShot(100, pwdEdit, [pwdEdit]() {
+                    pwdEdit->setFocus();
+                    pwdEdit->activateWindow();
+                });
 
                 if (pwdDialog->exec() != QDialog::Accepted) {
                     pwdDialog->deleteLater();
@@ -1190,10 +1266,6 @@ void MainWindow::onWifiListReceived(const QJsonArray &wifiList)
     });
     
     connect(cancelBtn, &QPushButton::clicked, dialog, &QDialog::reject);
-    
-    buttonLayout->addStretch();
-    buttonLayout->addWidget(cancelBtn);
-    buttonLayout->addWidget(connectBtn);
     
     layout->addLayout(buttonLayout);
     
