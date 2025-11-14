@@ -1006,16 +1006,30 @@ void MainWindow::onWifiListReceived(const QJsonArray &wifiList)
     // Create dialog to show WiFi list
     QDialog *dialog = new QDialog(this);
     dialog->setWindowTitle("Available WiFi Networks");
-    dialog->setMinimumSize(500, 400);
+    
+    // Set larger size for Android tablets (1280x800)
+    // Use 90% of screen height and 80% of screen width
+    QSize screenSize = QApplication::primaryScreen()->size();
+    int dialogWidth = qMin(700, static_cast<int>(screenSize.width() * 0.8));
+    int dialogHeight = qMin(650, static_cast<int>(screenSize.height() * 0.9));
+    dialog->resize(dialogWidth, dialogHeight);
     
     QVBoxLayout *layout = new QVBoxLayout(dialog);
+    layout->setContentsMargins(16, 16, 16, 16);
+    layout->setSpacing(12);
     
     QLabel *titleLabel = new QLabel("Select a WiFi network:");
-    titleLabel->setStyleSheet("font-size: 14px; font-weight: 600; margin-bottom: 10px;");
+    titleLabel->setStyleSheet("font-size: 16px; font-weight: 600; margin-bottom: 8px;");
     layout->addWidget(titleLabel);
     
-    // Create list widget
+    // Create list widget with explicit size policy
     QListWidget *listWidget = new QListWidget();
+    listWidget->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    listWidget->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+    listWidget->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+    listWidget->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
+    listWidget->setMinimumHeight(400);
+    
     listWidget->setStyleSheet(
         "QListWidget {"
         "    border: 1px solid #e2e8f0;"
@@ -1024,8 +1038,9 @@ void MainWindow::onWifiListReceived(const QJsonArray &wifiList)
         "    background-color: white;"
         "}"
         "QListWidget::item {"
-        "    padding: 12px;"
+        "    padding: 16px 12px;"
         "    border-bottom: 1px solid #f1f5f9;"
+        "    min-height: 48px;"
         "}"
         "QListWidget::item:hover {"
         "    background-color: #f8fafc;"
@@ -1057,13 +1072,14 @@ void MainWindow::onWifiListReceived(const QJsonArray &wifiList)
     QHBoxLayout *buttonLayout = new QHBoxLayout();
     
     QPushButton *connectBtn = new QPushButton("Connect");
+    connectBtn->setMinimumHeight(48);
     connectBtn->setStyleSheet(
         "QPushButton {"
         "    background-color: #3b82f6;"
         "    color: white;"
         "    border: none;"
-        "    padding: 10px 24px;"
-        "    font-size: 14px;"
+        "    padding: 14px 28px;"
+        "    font-size: 16px;"
         "    font-weight: 600;"
         "    border-radius: 8px;"
         "}"
@@ -1077,13 +1093,14 @@ void MainWindow::onWifiListReceived(const QJsonArray &wifiList)
     connectBtn->setEnabled(false);
     
     QPushButton *cancelBtn = new QPushButton("Cancel");
+    cancelBtn->setMinimumHeight(48);
     cancelBtn->setStyleSheet(
         "QPushButton {"
         "    background-color: #f1f5f9;"
         "    color: #475569;"
         "    border: 1px solid #e2e8f0;"
-        "    padding: 10px 24px;"
-        "    font-size: 14px;"
+        "    padding: 14px 28px;"
+        "    font-size: 16px;"
         "    font-weight: 600;"
         "    border-radius: 8px;"
         "}"

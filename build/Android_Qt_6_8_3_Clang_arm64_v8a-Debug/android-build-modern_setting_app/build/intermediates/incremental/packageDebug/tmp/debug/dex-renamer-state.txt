@@ -1,4 +1,4 @@
-#Fri Nov 14 21:07:39 MMT 2025
+#Fri Nov 14 21:19:21 MMT 2025
 base.2=/home/mr_robot/Desktop/Git/modern_setting_app/build/Android_Qt_6_8_3_Clang_arm64_v8a-Debug/android-build-modern_setting_app/build/intermediates/dex/debug/mergeProjectDexDebug/10/classes.dex
 path.2=10/classes.dex
 base.1=/home/mr_robot/Desktop/Git/modern_setting_app/build/Android_Qt_6_8_3_Clang_arm64_v8a-Debug/android-build-modern_setting_app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
