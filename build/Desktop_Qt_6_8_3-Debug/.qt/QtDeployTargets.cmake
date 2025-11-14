@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_modern_setting_app_FILE /home/mr_robot/Desktop/Git/modern_setting_app/build/Desktop_Qt_6_8_3-Debug/modern_setting_app)
+set(__QT_DEPLOY_TARGET_modern_setting_app_TYPE EXECUTABLE)

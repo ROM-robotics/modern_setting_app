@@ -1,0 +1,15 @@
+# This file is managed by Qt Creator, do not edit!
+
+set("ANDROID_STL" "c++_shared" CACHE "STRING" "" FORCE)
+set("ANDROID_SDK" "/home/mr_robot/Android/Sdk" CACHE "PATH" "" FORCE)
+set("CMAKE_TOOLCHAIN_FILE" "build/cmake/android.toolchain.cmake" CACHE "FILEPATH" "" FORCE)
+set("ANDROID_NDK" "" CACHE "PATH" "" FORCE)
+set("QT_MAINTENANCE_TOOL" "/home/mr_robot/Qt/MaintenanceTool" CACHE "FILEPATH" "" FORCE)
+set("CMAKE_BUILD_TYPE" "Debug" CACHE "STRING" "" FORCE)
+set("CMAKE_GENERATOR" "Unix Makefiles" CACHE "STRING" "" FORCE)
+set("ANDROID_ABI" "arm64-v8a" CACHE "STRING" "" FORCE)
+set("ANDROID_PLATFORM" "" CACHE "STRING" "" FORCE)
+set("CMAKE_PROJECT_INCLUDE_BEFORE" "/home/mr_robot/Desktop/Git/modern_setting_app/build/Android_Qt_6_8_3-Debug/.qtc/package-manager/auto-setup.cmake" CACHE "FILEPATH" "" FORCE)
+set("CMAKE_COLOR_DIAGNOSTICS" "ON" CACHE "BOOL" "" FORCE)
+set("CMAKE_FIND_ROOT_PATH" "" CACHE "PATH" "" FORCE)
+set("ANDROID_USE_LEGACY_TOOLCHAIN_FILE" "OFF" CACHE "BOOL" "" FORCE)

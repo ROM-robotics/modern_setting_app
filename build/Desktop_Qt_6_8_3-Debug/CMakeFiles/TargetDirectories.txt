@@ -1,0 +1,9 @@
+/home/mr_robot/Desktop/Git/modern_setting_app/build/Desktop_Qt_6_8_3-Debug/CMakeFiles/modern_setting_app.dir
+/home/mr_robot/Desktop/Git/modern_setting_app/build/Desktop_Qt_6_8_3-Debug/CMakeFiles/edit_cache.dir
+/home/mr_robot/Desktop/Git/modern_setting_app/build/Desktop_Qt_6_8_3-Debug/CMakeFiles/rebuild_cache.dir
+/home/mr_robot/Desktop/Git/modern_setting_app/build/Desktop_Qt_6_8_3-Debug/CMakeFiles/list_install_components.dir
+/home/mr_robot/Desktop/Git/modern_setting_app/build/Desktop_Qt_6_8_3-Debug/CMakeFiles/install.dir
+/home/mr_robot/Desktop/Git/modern_setting_app/build/Desktop_Qt_6_8_3-Debug/CMakeFiles/install/local.dir
+/home/mr_robot/Desktop/Git/modern_setting_app/build/Desktop_Qt_6_8_3-Debug/CMakeFiles/install/strip.dir
+/home/mr_robot/Desktop/Git/modern_setting_app/build/Desktop_Qt_6_8_3-Debug/CMakeFiles/modern_setting_app_autogen_timestamp_deps.dir
+/home/mr_robot/Desktop/Git/modern_setting_app/build/Desktop_Qt_6_8_3-Debug/CMakeFiles/modern_setting_app_autogen.dir

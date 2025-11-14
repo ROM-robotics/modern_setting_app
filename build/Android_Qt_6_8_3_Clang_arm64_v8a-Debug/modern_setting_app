@@ -1,0 +1,8 @@
+#!/bin/sh
+
+/home/mr_robot/Qt/6.8.3/gcc_64/libexec/qt-android-runner.py \
+    --adb "/home/mr_robot/Android/Sdk/platform-tools/adb" \
+    --build-path "/home/mr_robot/Desktop/Git/modern_setting_app/build/Android_Qt_6_8_3_Clang_arm64_v8a-Debug/android-build-modern_setting_app" \
+    --apk "/home/mr_robot/Desktop/Git/modern_setting_app/build/Android_Qt_6_8_3_Clang_arm64_v8a-Debug/android-build-modern_setting_app/modern_setting_app.apk" \
+    $@
+

@@ -1,0 +1,178 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-dfcb951b87ba900ff938.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "modern_setting_app",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "_qt_internal_apk_dependencies::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-_qt_internal_apk_dependencies-Debug-a731fd98c9856e4b1cca.json",
+					"name" : "_qt_internal_apk_dependencies",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-aab-Debug-2e4373edc1ff72ee9c17.json",
+					"name" : "aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "aar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-aar-Debug-63392682567f4726212e.json",
+					"name" : "aar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk-Debug-97826e1c5518ce6226e0.json",
+					"name" : "apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk_all::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk_all-Debug-55b77f0c0972ca10eb09.json",
+					"name" : "apk_all",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "modern_setting_app::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-modern_setting_app-Debug-c98d542b9115569431f5.json",
+					"name" : "modern_setting_app",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "modern_setting_app_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-modern_setting_app_autogen-Debug-c657eeee34cde0ea5612.json",
+					"name" : "modern_setting_app_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "modern_setting_app_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-modern_setting_app_autogen_timestamp_deps-Debug-b094856e6388aebf9ab5.json",
+					"name" : "modern_setting_app_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "modern_setting_app_copy_apk_dependencies::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-modern_setting_app_copy_apk_dependencies-Debug-865f1715037468e4dbad.json",
+					"name" : "modern_setting_app_copy_apk_dependencies",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "modern_setting_app_make_aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-modern_setting_app_make_aab-Debug-bdae58beafc5948eb3d8.json",
+					"name" : "modern_setting_app_make_aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "modern_setting_app_make_aar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-modern_setting_app_make_aar-Debug-9a9b551f96f1bcdb9a68.json",
+					"name" : "modern_setting_app_make_aar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "modern_setting_app_make_apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-modern_setting_app_make_apk-Debug-ba7e4a85ab4b5099f569.json",
+					"name" : "modern_setting_app_make_apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "modern_setting_app_prepare_apk_dir::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-modern_setting_app_prepare_apk_dir-Debug-0658873bc451dc4bb1d6.json",
+					"name" : "modern_setting_app_prepare_apk_dir",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qt_internal_plugins::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qt_internal_plugins-Debug-4361699392940e6f63a6.json",
+					"name" : "qt_internal_plugins",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/mr_robot/Desktop/Git/modern_setting_app/build/Android_Qt_6_8_3_Clang_arm64_v8a-Debug",
+		"source" : "/home/mr_robot/Desktop/Git/modern_setting_app"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

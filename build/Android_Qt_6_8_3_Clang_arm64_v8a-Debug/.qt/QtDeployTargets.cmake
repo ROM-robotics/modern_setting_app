@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_modern_setting_app_FILE /home/mr_robot/Desktop/Git/modern_setting_app/build/Android_Qt_6_8_3_Clang_arm64_v8a-Debug/libmodern_setting_app_arm64-v8a.so)
+set(__QT_DEPLOY_TARGET_modern_setting_app_TYPE MODULE_LIBRARY)

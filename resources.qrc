@@ -1,0 +1,12 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/">
+        <file>images/keyboard_arrow_left_128_black.png</file>
+        <file>images/keyboard_arrow_left_128_gray.png</file>
+        <file>images/keyboard_arrow_right_128_black.png</file>
+        <file>images/keyboard_arrow_right_128_gray.png</file>
+        <file>images/wifi_128_black.png</file>
+        <file>images/wifi_128_green.png</file>
+        <file>images/wifi_128_white.png</file>
+    </qresource>
+</RCC>
