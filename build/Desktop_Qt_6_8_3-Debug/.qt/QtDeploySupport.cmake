@@ -27,7 +27,7 @@ if(QT_DEPLOY_PREFIX STREQUAL "")
     set(QT_DEPLOY_PREFIX .)
 endif()
 if(NOT QT_DEPLOY_IGNORED_LIB_DIRS)
-    set(QT_DEPLOY_IGNORED_LIB_DIRS "/usr/lib/gcc/x86_64-linux-gnu/11;/usr/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/usr/lib/llvm-14/lib;/lib;/usr/lib")
+    set(QT_DEPLOY_IGNORED_LIB_DIRS "/lib/gcc/x86_64-linux-gnu/11;/lib64;/lib/x86_64-linux-gnu;/usr/lib/x86_64-linux-gnu;/usr/lib64;/usr/lib/llvm-14/lib;/lib;/usr/lib")
 endif()
 
 # These are internal implementation details. They may be removed at any time.

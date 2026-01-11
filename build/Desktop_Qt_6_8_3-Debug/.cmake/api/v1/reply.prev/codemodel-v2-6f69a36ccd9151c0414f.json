@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-e743d57ab85659c2cbf0.json",
+					"jsonFile" : "directory-.-Debug-64a34a6393ff65ede6b8.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "modern_setting_app::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-modern_setting_app-Debug-eb5bb69af68eea5acef9.json",
+					"jsonFile" : "target-modern_setting_app-Debug-81dd7cc57be241371762.json",
 					"name" : "modern_setting_app",
 					"projectIndex" : 0
 				},
